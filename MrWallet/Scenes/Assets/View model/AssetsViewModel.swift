@@ -25,7 +25,7 @@ final class AssetsViewModel: AssetsViewModelType {
     
     var isLoadingAssets: AnyPublisher<Bool, Never> {
         loadingSubject
-            .map { $0.isLoading }
+            .map(\.isLoading)
             .eraseToAnyPublisher()
     }
     
