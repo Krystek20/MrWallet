@@ -17,7 +17,7 @@ extension Publisher where Self.Failure == Never {
 
 extension Publisher {
     func sinkToLoadable(_ completion: @escaping (LoadingState<Output>) -> Void) -> AnyCancellable {
-        return sink(receiveCompletion: { subscriptionCompletion in
+        sink(receiveCompletion: { subscriptionCompletion in
             guard case .failure(let error) = subscriptionCompletion else { return }
             completion(.failed(error))
         }, receiveValue: { value in

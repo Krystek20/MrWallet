@@ -8,7 +8,7 @@ final class WalletsViewController: UIViewController {
     private let viewModel: WalletsViewModelType
     private let mainView: WalletsView
     private var bindings = Set<AnyCancellable>()
-    private var dataSource = WalletsDataSource()
+    private let dataSource = WalletsDataSource()
     
     // MARK: - Initialization
     

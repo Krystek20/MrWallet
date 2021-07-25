@@ -9,6 +9,10 @@ final class PriceFormatterTests: XCTestCase {
         sut = PriceFormatter()
     }
     
+    override func tearDown() {
+        sut = nil
+    }
+    
     func testFormatingPriceWithTwoFractionDigitsForUSLocale() {
         // given
         let locale = Locale(identifier: "en-US")

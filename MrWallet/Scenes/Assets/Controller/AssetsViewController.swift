@@ -8,7 +8,7 @@ final class AssetsViewController: UIViewController {
     private let viewModel: AssetsViewModelType
     private let mainView: AssetsView
     private var bindings = Set<AnyCancellable>()
-    private var dataSource = AssetsDataSource()
+    private let dataSource = AssetsDataSource()
     
     // MARK: - Initialization
     
